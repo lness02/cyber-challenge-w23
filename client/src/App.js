@@ -8,10 +8,6 @@ export default class App extends React.Component {
     users: [],
   };
   componentDidMount() {
-    const headers = {
-      'Authorization': 'Bearer my-token',
-      'My-Custom-Header': 'flag{sp1d3rm4n_d03s_wh4t3v3r_a_sp1d3r_c4n}'
-    };
     axios.get("/users.json", {headers: {'My-Custom-Header': 'flag{sp1d3rm4n_d03s_wh4t3v3r_a_sp1d3r_c4n}'}}).then((response) => {
       this.setState({ users: response.data });
     });
